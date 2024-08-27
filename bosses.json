@@ -1,0 +1,367 @@
+{
+  "Abyssal Sire": {
+    "Bludgeon claw": 0.00485,
+    "Bludgeon spine": 0.00485,
+    "Bludgeon axon": 0.004855,
+    "Abyssal dagger": 0.00203,
+    "Jar of miasma": 0.00101,
+    "Abyssal orphan": 0.00039,
+    "Unsired": 0.01
+  },
+  "Alchemical Hydra": {
+    "Hydra's eye": 0.00552,
+    "Hydra's fangs:": 0.00552,
+    "Hydra's heart": 0.00552,
+    "Hydra's tail": 0.00194,
+    "Hydra leather": 0.00194,
+    "Hydra's claw": 0.00099,
+    "Jar of chemicals": 0.0005,
+    "Ikkle hydra": 0.00033
+  },
+  "Barrows Chests": {
+    "Ahrim's hood": 0.00286,
+    "Ahrim's robetope": 0.00286,
+    "Ahrim's robeskirt": 0.00286,
+    "Ahrim's staff": 0.00286,
+    "Dharok's helm": 0.00286,
+    "Dharok's platebody": 0.00286,
+    "Dharok's platelegs": 0.00286,
+    "Dharok's greataxe": 0.00286,
+    "Guthan's helm": 0.00286,
+    "Guthan's platebody": 0.00286,
+    "Guthan's chainskirt": 0.00286,
+    "Guthan's warspear": 0.00286,
+    "Karil's coif": 0.00286,
+    "Karil's leathertop": 0.00286,
+    "Karil's leatherskirt": 0.00286,
+    "Karil's crossbow": 0.00286,
+    "Torag's helm": 0.00286,
+    "Torag's platebody": 0.00286,
+    "Torag's platelegs": 0.00286,
+    "Torag's hammers": 0.00286,
+    "Verac's helm": 0.00286,
+    "Verac's brassard": 0.00286,
+    "Verac's plateskirt": 0.00286,
+    "Verac's flail": 0.00286
+  },
+  "Bryophyta": {
+    "Bryophyta's essence": 0.00847
+  },
+  "Callisto and Artio": {
+    "Artio": {
+      "Claws of callisto": 0.00161,
+      "Tyrannical ring": 0.00139,
+      "Voidwaker hilt": 0.00109,
+      "Callisto cub": 0.000357
+    },
+    "Callisto": {
+      "Claws of callisto": 0.00510,
+      "Tyrannical ring": 0.00195,
+      "Voidwaker hilt": 0.00277,
+      "Callisto cub": 0.000667
+    }
+  },
+  "Cerberus": {
+    "Primordial crystal": 0.001953125,
+    "Pegasian crystal": 0.001953125,
+    "Eternal crystal": 0.001953125,
+    "Smouldering stone": 0.001953125,
+    "Jar of souls": 0.0005,
+    "Hellpuppy": 0.00033
+  },
+  "Chaos Elemental": {
+    "Pet chaos elemental": 0.00333
+  },
+  "Chaos Fanatic": {
+    "Odium shard 1": 0.00390,
+    "Malediction shard 1": 0.00390,
+    "Pet chaos elemental": 0.001
+  },
+  "Commander Zilyana": {
+    "Saradomin sword": 0.00787,
+    "Saradomin's light": 0.00393,
+    "Armadyl crossbow": 0.00196,
+    "Saradomin hilt": 0.00196,
+    "Pet zilyana": 0.0002
+  },
+  "Corporeal Beast": {
+    "Spectral sigil": 0.00073,
+    "Arcane sigil": 0.00073,
+    "Elysian sigil": 0.00024,
+    "Spirit shield": 0.01562,
+    "Holy elixir": 0.00585,
+    "Jar of spirits": 0.001,
+    "Pet dark core": 0.0002
+  },
+  "Crazy Archaeologist": {
+    "Odium shard 2": 0.00390,
+    "Malediction shard 2": 0.00390
+  },
+  "Dagannoth Kings": {
+    "Dagannoth Rex": {
+      "Berserker ring": 0.00781,
+      "Warrior ring": 0.00781,
+      "Pet dagannoth rex": 0.0002
+    },
+    "Dagannoth Prime": {
+      "Seers ring": 0.00781,
+      "Mud battlestaff": 0.00781,
+      "Pet dagannoth prime": 0.0002
+    },
+    "Dagannoth supreme": {
+      "Archers ring": 0.00781,
+      "Seercull": 0.00781,
+      "Pet dagannoth supreme": 0.0002
+    }
+  },
+  "Duke Sucellus": {
+    "Chromium Ingot": 0.00416,
+    "Magus vestige": 0.00138,
+    "Eye of the duke": 0.00138,
+    "Virtus mask": 0.00046,
+    "Virtus robe top": 0.00046,
+    "Virtus robe bottom": 0.00046,
+    "Baron": 0.0004
+  },
+  "Fortis Colosseum": {
+    "Echo crystal": 0.03125,
+    "Sunfire fanatic helm": 0.01562,
+    "Sunfire fanatic cuirass": 0.01562,
+    "sunfire fanatic chausses": 0.01562,
+    "Tonalztics of ralos (uncharged)": 0.00520,
+    "Smol heredit": 0.005
+  },
+  "General Graardor": {
+    "Bandos hilt": 0.00196,
+    "Bandos chestplate": 0.00262,
+    "Bandos tassets": 0.00262,
+    "Bandos boots": 0.00262,
+    "Pet general graardor": 0.0002
+  },
+  "Giant Mole": {
+    "Baby mole": 0.00033
+  },
+  "Grotesque Guardians": {
+    "Granite gloves": 0.004,
+    "Granite ring": 0.004,
+    "Granite hammer": 0.00267,
+    "Black tourmaline core": 0.002,
+    "Jar of stone": 0.0002,
+    "Noon": 0.00033
+  },
+  "Hespori": {
+    "Bottomless compost bucket": 0.02857
+  },
+  "Kalphite Queen": {
+    "Kq head": 0.00781,
+    "Jar of sand": 0.0005,
+    "Kalphite princess": 0.00033
+  },
+  "King Black Dragon": {
+    "Kbd heads": 0.00781,
+    "Prince black dragon": 0.00033
+  },
+  "Kraken": {
+    "Kraken tentacle": 0.0025,
+    "Trident of the seas (full)": 0.00195,
+    "Jar of dirt": 0.001,
+    "Pet kraken": 0.00033
+  },
+  "Kree'arra": {
+    "Armadyl hilt": 0.00196,
+    "Armadyl chestplate": 0.00262,
+    "Armadyl chainskirt": 0.00262,
+    "Armadyl helmet": 0.00262,
+    "Pet kree'arra": 0.0002
+  },
+  "K'ril Tsutsaroth": {
+    "Steam battlestaff": 0.00787,
+    "Zamorakian spear": 0.00787,
+    "Staff of the dead": 0.00196,
+    "Zamorak hilt": 0.00196,
+    "Pet k'ril tsutsaroth": 0.0002
+  },
+  "Moons of Peril": {
+    "Eclipse atlatl": 0.00446,
+    "Eclipse moon helm": 0.00446,
+    "Eclipse moon chestplate": 0.00446,
+    "Eclipse moon tassets": 0.00446,
+    "Dual macuahuitl": 0.00446,
+    "Blood moon helm": 0.00446,
+    "Blood moon chestplate": 0.00446,
+    "Blood moon tassets": 0.00446,
+    "Blue moon spear": 0.00446,
+    "Blue moon helm": 0.00446,
+    "Blue moon chestplate": 0.00446,
+    "Blue moon tassets": 0.00446
+  },
+  "Nex": {
+    "Zaryte vambraces": 0.00581,
+    "Nihil horn": 0.00387,
+    "Torva full helm (damaged)": 0.00387,
+    "Torva platebody (damaged)": 0.00387,
+    "Torva platelegs (damaged)": 0.00387,
+    "Ancient hilt": 0.00194,
+    "Nihil shard": 375,
+    "Nexling": 0.002
+  },
+  "Obor": {
+    "Hill giant club": 0.00847
+  },
+  "Phantom Muspah": {
+    "Venator shard": 0.01,
+    "Ancient icon": 0.02,
+    "Muphin": 0.0004
+  },
+  "Sarachnis": {
+    "Sarachnis cudgel": 0.00260,
+    "Jar of eyes": 0.0005,
+    "Sraracha": 0.00033
+  },
+  "Scorpia": {
+    "Odium shard 3": 0.00390,
+    "Malediction shard 3": 0.00390,
+    "Scorpia''s offspring": 0.00049
+  },
+  "Scurrius": {
+    "Scurry": 0.00033,
+    "Scurrius' spine": 0.03030
+  },
+  "Skotizo": {
+    "Dark claw": 0.04,
+    "Skotos": 0.01538,
+    "Dark totem": 0.00781,
+    "Jar of darkness": 0.005
+  },
+  "Tempoross": {
+    "Fish barrel": 0.0025,
+    "Tackle box": 0.0025,
+    "Big harpoonfish": 0.000625,
+    "Tome of water (empty)": 0.000625,
+    "Tiny tempor": 0.000125
+  },
+  "The Fight Caves": {
+    "TzRek-Jad": 0.01492
+  },
+  "The Gauntlet": {
+    "Gauntlet": {
+      "Crystal weapon seed": 0.00833,
+      "Crystal armour seed": 0.00833,
+      "Enhanced crystal weapon seed": 0.0005,
+      "Youngllef": 0.0005
+    },
+    "Corrupted Gauntlet": {
+      "Crystal weapon seed": 0.02,
+      "Crystal armour seed": 0.02,
+      "Enhanced crystal weapon seed": 0.0025,
+      "Youngllef": 0.00125
+    }
+  },
+  "The Inferno": {
+    "Jal-nib-rek": 0.023256
+  },
+  "The Leviathan": {
+    "Chromium Ingot": 0.00390,
+    "Venator vestige": 0.00130,
+    "Leviathan's lure": 0.00130,
+    "Virtus mask": 0.00043,
+    "Virtus robe top": 0.00043,
+    "Virtus robe bottom": 0.00043,
+    "Lil'viathan": 0.0004
+  },
+  "The Nightmare": {
+    "Phosani's Nightmare": {
+      "Nightmare staff": 0.00188,
+      "Inquisitor's great helm": 0.00143,
+      "Inquisitor's hauberk": 0.00143,
+      "Inquisitor's plateskirt": 0.00143,
+      "Inquisitor's mace": 0.0008,
+      "Eldritch orb": 0.000625,
+      "Harmonised orb": 0.000625,
+      "Volatile orb": 0.000625
+    },
+    "Nightmare": {}
+  },
+  "Thermonuclear Smoke Devil": {
+    "Smoke battlestaff": 0.00195,
+    "Jar of smoke": 0.0005,
+    "Pet smoke devil": 0.00033
+  },
+  "The Whisperer": {
+    "Chromium Ingot": 0.00585,
+    "Bellator vestige": 0.00195,
+    "Eye of the duke": 0.00195,
+    "Virtus mask": 0.00065,
+    "Virtus robe top": 0.00065,
+    "Virtus robe bottom": 0.00065,
+    "Wisp": 0.0005
+  },
+  "Vardorvis": {
+    "Chromium Ingot": 0.00275,
+    "Ultor vestige": 0.00091,
+    "Executioner's axe head": 0.00091,
+    "Virtus mask": 0.00031,
+    "Virtus robe top": 0.00031,
+    "Virtus robe bottom": 0.00031,
+    "Butch": 0.00033
+  },
+  "Venenatis and Spindel": {
+    "Spindel": {
+      "Fangs of venenatis": 0.00161,
+      "Treasonous ring": 0.00139,
+      "Voidwaker gem": 0.00109,
+      "Venenatis spiderling": 0.000357
+    },
+    "Venenatis": {
+      "Fangs of venenatis": 0.00510,
+      "Treasonous ring": 0.00195,
+      "Voidwaker gem": 0.00277,
+      "Venenatis spiderling": 0.000667
+    }
+  },
+  "Vet'ion and Calvar'ion": {
+    "Calvar'ion": {
+      "Skull of vet'ion": 0.00161,
+      "Ring of the gods": 0.00139,
+      "Voidwaker blade": 0.00109,
+      "Vet'ion jr.": 0.000357
+    },
+    "Vet'ion": {
+      "Skull of vet'ion": 0.00510,
+      "Ring of the gods": 0.00195,
+      "Voidwaker blade": 0.00277,
+      "Vet'ion jr.": 0.000667
+    }
+  },
+  "Vorkath": {
+    "Dragonbone necklace": 0.001,
+    "Jar of decay": 0.00033,
+    "Vorki": 0.00033,
+    "Skeletal visage": 0.0002
+  },
+  "Wintertodt": {
+    "Warm gloves": 0.00667,
+    "Bruma torch": 0.00667,
+    "Pyromancer hood": 0.00667,
+    "Pyromancer garb": 0.00667,
+    "Pyromancer robe": 0.00667,
+    "Pyromancer boots": 0.00667,
+    "Tome of fire (empty)": 0.001,
+    "Phoenix": 0.0002
+  },
+  "Zalcano": {
+    "Crystal tool seed": 0.005,
+    "Smolcano": 0.00044,
+    "Zalcano shard": 0.000889
+  },
+  "Zulrah": {
+    "Tanzanite fang": 0.00195,
+    "Magic fang": 0.00195,
+    "Serpentine visage": 0.00195,
+    "Uncut onyx": 0.00195,
+    "Tanzanite mutagen": 0.00015,
+    "Magma mutagen": 0.00015,
+    "Jar of swamp": 0.00033,
+    "Pet snakeling": 0.00025
+  }
+}
