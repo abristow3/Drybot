@@ -1,0 +1,7 @@
+clan_name: flux
+urls:
+  wom_get_clan: https://api.wiseoldman.net/v2/groups
+  wom_get_clan_members: https://api.wiseoldman.net/v2/groups
+  clog_api_user: https://api.collectionlog.net/collectionlog/user
+
+
