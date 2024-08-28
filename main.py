@@ -34,12 +34,14 @@ class DrynessCalc:
         self.wom_clans_url = ""
         self.wom_clan_members_url = ""
         self.clog_user_url = ""
-        # self.highscores_url = "https://secure.runescape.com/m\=hiscore_oldschool/index_lite.json\?player\="
+        self.boss_rates = {}
+        self.dryest_members = {}
 
         self.setup()
 
     def setup(self):
         self.load_config()
+        self.boss_rates = self.load_bosses()
         self.clan_name = self.config['clan_name']
         self.wom_clans_url = self.config['urls']['wom_get_clan']
         self.wom_clan_members_url = self.config['urls']['wom_get_clan_members']
@@ -47,7 +49,6 @@ class DrynessCalc:
 
         self.get_clan_id()
         self.wom_clan_members_url = f"{self.wom_clan_members_url}/{self.clan_id}"
-
         self.get_clan_member_list()
 
     def load_config(self) -> None:
@@ -74,15 +75,35 @@ class DrynessCalc:
         response = requests.get(url=f'{self.clog_user_url}/{username}').json()
         return response
 
-    # def get_user_highscores(self, username: str) -> dict:
-    #     response = requests.get(url=f"{self.highscores_url}{username}")
-    #     return response
+    def calc_dryest(self):
+        cerb_dryest = self.boss_rates['Cerberus']
+        print(cerb_dryest)
+        self.clan_members = ["Snape Grass", "GimPoutine"]
+        for member in self.clan_members:
+            clog = self.get_user_clog(username=member.lower())
 
-    @staticmethod
-    def get_user_skill_xp(skill_name: str, highscores: dict) -> int:
-        for skill in highscores['skills']:
-            if skill['name'] == skill_name:
-                return skill['xp']
+            cerb_kills = clog['collectionLog']['tabs']['Bosses']['Cerberus']['killCount'][0]['amount']
+
+            print(clog['collectionLog']['tabs']['Bosses']['Cerberus'])
+
+            for unique in self.boss_rates['Cerberus']['uniques'].keys():
+                for item in clog['collectionLog']['tabs']['Bosses']['Cerberus']['items']:
+                    if item['name'] == unique:
+                        # Calculate dryness
+                        dryness = self.calculate_dryness(num_success=item['quantity'], num_attempts=cerb_kills,
+                                                         drop_chance=self.boss_rates['Cerberus']['uniques'][
+                                                             item['name']])
+
+                        self.print_dryness(dryness=dryness, item=item['name'], kills=cerb_kills, num_drops=item['quantity'])
+        '''
+        Get list of clan members
+        for each clan member get their clog
+        calc how dry they are for each unique
+        
+        make a copy of the bosses.json file and replace the boss rates with a lsit of "playername:dryness"
+        sort the lsit by appending on the : and sort by rate?
+        
+        '''
 
     def load_bosses(self) -> dict:
         drops = self.read_json(fp="bosses.json")
@@ -99,12 +120,8 @@ class DrynessCalc:
 
 if __name__ == '__main__':
     calc = DrynessCalc()
+    calc.calc_dryest()
 
-    # boss_rates = calc.load_bosses()
-    #
-    # smold_rate = boss_rates['Cerberus']['Smouldering stone']
-    #
-    # users = ["Snape Grass", "Frank Donner", "GimPoutine"]
     # user_clog = calc.get_user_clog(username=user)
     #
     # cerb_kills = user_clog['collectionLog']['tabs']['Bosses']['Cerberus']['killCount'][0]['amount']
