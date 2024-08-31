@@ -63,28 +63,6 @@
       "Bryophyta's essence": 0.00847
     }
   },
-  "Callisto and Artio": {
-    "Artio": {
-      "uniques": {
-        "Claws of callisto": 0.00161,
-        "Tyrannical ring": 0.00139,
-        "Voidwaker hilt": 0.00109
-      },
-      "pet": {
-        "Callisto cub": 0.000357
-      }
-    },
-    "Callisto": {
-      "uniques": {
-        "Claws of callisto": 0.00510,
-        "Tyrannical ring": 0.00195,
-        "Voidwaker hilt": 0.00277
-      },
-      "pet": {
-        "Callisto cub": 0.000667
-      }
-    }
-  },
   "Cerberus": {
     "uniques": {
       "Primordial crystal": 0.001953125,
@@ -97,11 +75,6 @@
     },
     "pet": {
       "Hellpuppy": 0.00033
-    }
-  },
-  "Chaos Elemental": {
-    "pet": {
-      "Pet chaos elemental": 0.00333
     }
   },
   "Chaos Fanatic": {
@@ -145,35 +118,6 @@
       "Malediction shard 2": 0.00390
     }
   },
-  "Dagannoth Kings": {
-    "Dagannoth Rex": {
-      "uniques": {
-        "Berserker ring": 0.00781,
-        "Warrior ring": 0.00781
-      },
-      "pet": {
-        "Pet dagannoth rex": 0.0002
-      }
-    },
-    "Dagannoth Prime": {
-      "uniques": {
-        "Seers ring": 0.00781,
-        "Mud battlestaff": 0.00781
-      },
-      "pet": {
-        "Pet dagannoth prime": 0.0002
-      }
-    },
-    "Dagannoth supreme": {
-      "uniques": {
-        "Archers ring": 0.00781,
-        "Seercull": 0.00781
-      },
-      "pet": {
-        "Pet dagannoth supreme": 0.0002
-      }
-    }
-  },
   "Duke Sucellus": {
     "uniques": {
       "Chromium Ingot": 0.00416,
@@ -208,11 +152,6 @@
     },
     "pet": {
       "Pet general graardor": 0.0002
-    }
-  },
-  "Giant Mole": {
-    "pet": {
-      "Baby mole": 0.00033
     }
   },
   "Grotesque Guardians": {
@@ -382,38 +321,6 @@
       "Tiny tempor": 0.000125
     }
   },
-  "The Fight Caves": {
-    "pet": {
-      "TzRek-Jad": 0.01492
-    }
-  },
-  "The Gauntlet": {
-    "Gauntlet": {
-      "uniques": {
-        "Crystal weapon seed": 0.00833,
-        "Crystal armour seed": 0.00833,
-        "Enhanced crystal weapon seed": 0.0005
-      },
-      "pet": {
-        "Youngllef": 0.0005
-      }
-    },
-    "Corrupted Gauntlet": {
-      "uniques": {
-        "Crystal weapon seed": 0.02,
-        "Crystal armour seed": 0.02,
-        "Enhanced crystal weapon seed": 0.0025
-      },
-      "pet": {
-        "Youngllef": 0.00125
-      }
-    }
-  },
-  "The Inferno": {
-    "pet": {
-      "Jal-nib-rek": 0.023256
-    }
-  },
   "The Leviathan": {
     "uniques": {
       "Chromium Ingot": 0.00390,
@@ -427,27 +334,6 @@
       "Lil'viathan": 0.0004
     }
   },
-  "The Nightmare": {
-    "Phosani's Nightmare": {
-      "uniques": {
-        "Nightmare staff": 0.00188,
-        "Inquisitor's great helm": 0.00143,
-        "Inquisitor's hauberk": 0.00143,
-        "Inquisitor's plateskirt": 0.00143,
-        "Inquisitor's mace": 0.0008,
-        "Eldritch orb": 0.000625,
-        "Harmonised orb": 0.000625,
-        "Volatile orb": 0.000625
-      },
-      "jar": {
-        "Jar of dreams": 0.00025
-      },
-      "pet": {
-        "Little nightmare": 0.00071
-      }
-    }
-  },
-  "Nightmare": {},
   "Thermonuclear Smoke Devil": {
     "uniques": {
       "Smoke battlestaff": 0.00195
@@ -483,50 +369,6 @@
     },
     "pet": {
       "Butch": 0.00033
-    }
-  },
-  "Venenatis and Spindel": {
-    "Spindel": {
-      "uniques": {
-        "Fangs of venenatis": 0.00161,
-        "Treasonous ring": 0.00139,
-        "Voidwaker gem": 0.00109
-      },
-      "pet": {
-        "Venenatis spiderling": 0.000357
-      }
-    },
-    "Venenatis": {
-      "uniques": {
-        "Fangs of venenatis": 0.00510,
-        "Treasonous ring": 0.00195,
-        "Voidwaker gem": 0.00277
-      },
-      "pet": {
-        "Venenatis spiderling": 0.000667
-      }
-    }
-  },
-  "Vet'ion and Calvar'ion": {
-    "Calvar'ion": {
-      "uniques": {
-        "Skull of vet'ion": 0.00161,
-        "Ring of the gods": 0.00139,
-        "Voidwaker blade": 0.00109
-      },
-      "pet": {
-        "Vet'ion jr.": 0.000357
-      }
-    },
-    "Vet'ion": {
-      "uniques": {
-        "Skull of vet'ion": 0.00510,
-        "Ring of the gods": 0.00195,
-        "Voidwaker blade": 0.00277
-      },
-      "pet": {
-        "Vet'ion jr.": 0.000667
-      }
     }
   },
   "Vorkath": {
