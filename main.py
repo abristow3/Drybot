@@ -84,31 +84,35 @@ class DrynessCalc:
         for member in self.clan_members:
             clog = self.get_user_clog(username=member.lower())
 
-            cerb_kills = clog['collectionLog']['tabs']['Bosses']['Cerberus']['killCount'][0]['amount']
+            for boss in clog['collectionLog']['tabs']['Bosses']:
+                kills = clog['collectionLog']['tabs']['Bosses'][boss]['killCount'][0]['amount']
 
-            for unique in self.boss_rates['Cerberus']['uniques'].keys():
-                for item in clog['collectionLog']['tabs']['Bosses']['Cerberus']['items']:
-                    if item['name'] == unique:
-                        # Calculate dryness
-                        dryness = self.calculate_dryness(num_success=item['quantity'], num_attempts=cerb_kills,
-                                                         drop_chance=self.boss_rates['Cerberus']['uniques'][
-                                                             item['name']])
+                if boss in self.boss_rates.keys():
+                    for unique in self.boss_rates[boss]['uniques'].keys():
+                        for item in clog['collectionLog']['tabs']['Bosses'][boss]['items']:
+                            if item['name'] == unique:
+                                # Calculate dryness
+                                dryness = self.calculate_dryness(num_success=item['quantity'], num_attempts=kills,
+                                                                 drop_chance=self.boss_rates[boss]['uniques'][
+                                                                     item['name']])
 
-                        if first:
-                            dryest['Cerberus']['uniques'][unique]['dryness'] = dryness
-                            dryest['Cerberus']['uniques'][unique]['player'] = member
-                        elif dryness < dryest['Cerberus']['uniques'][unique]['dryness']:
-                            dryest['Cerberus']['uniques'][unique]['dryness'] = dryness
-                            dryest['Cerberus']['uniques'][unique]['player'] = member
-                        else:
-                            continue
-
-                        # self.print_dryness(dryness=dryness, item=item['name'], kills=cerb_kills, num_drops=item['quantity'])
+                                if first:
+                                    dryest[boss]['uniques'][unique]['dryness'] = dryness
+                                    dryest[boss]['uniques'][unique]['player'] = member
+                                    dryest[boss]['uniques'][unique]['kills'] = kills
+                                    dryest[boss]['uniques'][unique]['quantity'] = item['quantity']
+                                elif dryness < dryest[boss]['uniques'][unique]['dryness']:
+                                    dryest[boss]['uniques'][unique]['dryness'] = dryness
+                                    dryest[boss]['uniques'][unique]['player'] = member
+                                    dryest[boss]['uniques'][unique]['kills'] = kills
+                                    dryest[boss]['uniques'][unique]['quantity'] = item['quantity']
+                                else:
+                                    continue
 
             if first:
                 first = False
 
-        print(json.dumps(dryest['Cerberus'], indent=4))
+        print(json.dumps(dryest, indent=4))
 
         '''
         Get list of clan members
@@ -132,15 +136,13 @@ class DrynessCalc:
     def print_dryness(self, dryness: float, item: str, kills: int, num_drops: int) -> None:
         print("You had a {:.4f}% chance to get {} {}s in {} kills. ".format(dryness, num_drops, item, kills))
 
-
     def dry_dict(self):
         dryest = {}
         for boss in self.boss_rates.keys():
             dryest[boss] = {}
             dryest[boss]["uniques"] = {}
-            print(self.boss_rates[boss]['uniques'].keys())
             for item in self.boss_rates[boss]['uniques'].keys():
-                dryest[boss]["uniques"][item] = {"player": "", "dryness": ""}
+                dryest[boss]["uniques"][item] = {"player": "", "dryness": "", "kills": "", "quantity": ""}
 
         with open("dryness.json", 'w') as f:
             json.dump(dryest, f)
@@ -149,6 +151,7 @@ class DrynessCalc:
 if __name__ == '__main__':
     calc = DrynessCalc()
     calc.calc_dryest()
+    # calc.dry_dict()
 
     # user_clog = calc.get_user_clog(username=user)
     #
