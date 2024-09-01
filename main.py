@@ -1,3 +1,6 @@
+import time
+import datetime
+
 import requests
 import json
 from scipy import stats
@@ -71,18 +74,31 @@ class DrynessCalc:
         for member in response['memberships']:
             self.clan_members.append(member['player']['username'])
 
-    def get_user_clog(self, username: str) -> dict:
-        response = requests.get(url=f'{self.clog_user_url}/{username}').json()
-        return response
+        self.clan_members.sort()
+
+    def get_user_clog(self, username: str):
+        response = requests.get(url=f'{self.clog_user_url}/{username}')
+
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return None
 
     def calc_dryest(self):
 
         dryest = self.read_json(fp="dryness.json")
-        self.clan_members = ["Snape Grass", "GimPoutine"]
         first = True
 
         for member in self.clan_members:
             clog = self.get_user_clog(username=member.lower())
+
+            print(f"USERNAME: {member}")
+
+            if clog is None:
+                print("NO CLOG DATA")
+                continue
+
+            print("CLOG DATA")
 
             for boss in clog['collectionLog']['tabs']['Bosses']:
                 kills = clog['collectionLog']['tabs']['Bosses'][boss]['killCount'][0]['amount']
@@ -91,6 +107,10 @@ class DrynessCalc:
                     for unique in self.boss_rates[boss]['uniques'].keys():
                         for item in clog['collectionLog']['tabs']['Bosses'][boss]['items']:
                             if item['name'] == unique:
+
+                                if item['quantity'] != 0:
+                                    continue
+
                                 # Calculate dryness
                                 dryness = self.calculate_dryness(num_success=item['quantity'], num_attempts=kills,
                                                                  drop_chance=self.boss_rates[boss]['uniques'][
@@ -150,36 +170,19 @@ class DrynessCalc:
 
 if __name__ == '__main__':
     calc = DrynessCalc()
+
+    start = time.time()
     calc.calc_dryest()
+    end = time.time()
+    total = end - start
+    minutes = str(datetime.timedelta(seconds=total))
+    print(minutes)
+
+    '''
+    total time to run without loop unrolling:
+    '''
+
+    # calc.get_user_clog(username="Frank Donner")
     # calc.dry_dict()
 
     # user_clog = calc.get_user_clog(username=user)
-    #
-    # cerb_kills = user_clog['collectionLog']['tabs']['Bosses']['Cerberus']['killCount'][0]['amount']
-    # uniques = {}
-    #
-    # tracked_drops = boss_rates['Cerberus'].keys()
-    #
-    # for item in user_clog['collectionLog']['tabs']['Bosses']['Cerberus']['items']:
-    #     if item['name'] in tracked_drops:
-    #         uniques[item['name']] = item['quantity']
-    #
-    # total_uniques = 0
-    # chance_for_any = 0
-    #
-    # for key in boss_rates['Cerberus'].keys():
-    #     dryness = calc.calculate_dryness(num_success=uniques[key], num_attempts=cerb_kills,
-    #                                      drop_chance=boss_rates['Cerberus'][key])
-    #     calc.print_dryness(dryness=dryness, item=key, kills=cerb_kills, num_drops=uniques[key])
-    #
-    #     if key == "Hellpuppy":
-    #         continue
-    #     elif key == "Jar of souls":
-    #         continue
-    #     else:
-    #         total_uniques += uniques[key]
-    #         chance_for_any += boss_rates['Cerberus'][key]
-    #
-    # dryness = calc.calculate_dryness(num_success=total_uniques, num_attempts=cerb_kills,
-    #                                  drop_chance=chance_for_any)
-    # calc.print_dryness(dryness=dryness, item="uniques", kills=cerb_kills, num_drops=total_uniques)
